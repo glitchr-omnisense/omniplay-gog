@@ -1,6 +1,6 @@
-# omnigame/gog
+# omniplay/gog
 
-[omnisense/omnigame](https://github.com/glitchr-omnisense/omnigame)'s GOG, under any PHP host, with no
+[omnisense/omniplay](https://github.com/glitchr-omnisense/omniplay)'s GOG, under any PHP host, with no
 key: a product's record (`api.gog.com/products/{id}?expand=description`) with its price in the
 country asked (`/products/{id}/prices`), and the store's search (`catalog.gog.com/v1/catalog`)
 with prices, studios, genres, tags and the store's rating. These are the endpoints GOG's own store

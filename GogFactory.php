@@ -1,11 +1,11 @@
 <?php
 
-namespace Omnigame\Gog;
+namespace Omniplay\Gog;
 
-use Omnigame\Config;
-use Omnigame\Http\JsonClient;
-use Omnigame\ProviderFactory;
-use Omnigame\ProviderInterface;
+use Omniplay\Config;
+use Omniplay\Http\JsonClient;
+use Omniplay\ProviderFactory;
+use Omniplay\ProviderInterface;
 use Symfony\Component\HttpClient\HttpClient;
 use Symfony\Contracts\HttpClient\HttpClientInterface;
 
@@ -23,13 +23,13 @@ final class GogFactory extends ProviderFactory
     protected function populate(Config $c): void
     {
         $c->defaults([
-            'omnigame.factory_name' => 'gog',
-            'omnigame.factory_title' => 'GOG',
-            'omnigame.required_options' => [],
+            'omniplay.factory_name' => 'gog',
+            'omniplay.factory_title' => 'GOG',
+            'omniplay.required_options' => [],
             'locale' => 'en-US',
             'country' => 'US',
             'currency' => 'USD',
-            'user_agent' => 'omnigame/1.0 (+https://github.com/glitchr-omnisense/omnigame)',
+            'user_agent' => 'omniplay/1.0 (+https://github.com/glitchr-omnisense/omniplay)',
             'api' => 'https://api.gog.com',
             'catalog' => 'https://catalog.gog.com',
         ]);

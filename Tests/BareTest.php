@@ -1,11 +1,11 @@
 <?php
 
-namespace Omnigame\Gog\Tests;
+namespace Omniplay\Gog\Tests;
 
-use Omnigame\Gog\GogProvider;
-use Omnigame\Testing\BareTestCase;
+use Omniplay\Gog\GogProvider;
+use Omniplay\Testing\BareTestCase;
 
-/** omnigame/gog's classes load with omnisense/omnigame and Symfony's HTTP client contracts alone. */
+/** omniplay/gog's classes load with omnisense/omniplay and Symfony's HTTP client contracts alone. */
 final class BareTest extends BareTestCase
 {
     protected static function entryClass(): string

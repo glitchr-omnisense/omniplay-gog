@@ -1,6 +1,6 @@
-# omnigame/gog
+# omniplay/gog
 
-GOG for [omnisense/omnigame](https://github.com/glitchr-omnisense/omnigame), with no key: a
+GOG for [omnisense/omniplay](https://github.com/glitchr-omnisense/omniplay), with no key: a
 product's record with its price in a country, and the store's search with prices, studios, genres,
 tags and the store's rating. These are the endpoints GOG's own store and GOG Galaxy use; GOG
 publishes no API terms for them. The provider calls:
@@ -16,10 +16,10 @@ No library or ownership: GOG offers no way for a third party to read a player's 
 ## Installation
 
 ```sh
-composer require omnigame/gog
+composer require omniplay/gog
 ```
 
-Requires PHP 8.2, `omnisense/omnigame` (1.x) and `symfony/http-client` (6.4, 7 or 8).
+Requires PHP 8.2, `omnisense/omniplay` (1.x) and `symfony/http-client` (6.4, 7 or 8).
 
 ## Credentials
 
@@ -32,7 +32,7 @@ None.
 | `locale` | string | `en-US` | no | the texts' locale; a call's language without a region is widened: `en` -> `en-US`, any other `xx` -> `xx-XX` (`fr-FR`, but also `ja-JA`: give `ja-JP` in full) |
 | `country` | string | `US` | no | the prices' country |
 | `currency` | string | `USD` | no | the search's prices; a record's price is in the country's own currency |
-| `user_agent` | string | `omnigame/1.0 (+https://github.com/glitchr-omnisense/omnigame)` | no | |
+| `user_agent` | string | `omniplay/1.0 (+https://github.com/glitchr-omnisense/omniplay)` | no | |
 | `api` | string | `https://api.gog.com` | no | |
 | `catalog` | string | `https://catalog.gog.com` | no | |
 
@@ -80,8 +80,8 @@ Run live on 2026-10-27 (06:24 UTC), in the core's harness - two calls:
 
 require __DIR__.'/vendor/autoload.php';
 
-use Omnigame\Gog\GogFactory;
-use Omnigame\Model\GameRef;
+use Omniplay\Gog\GogFactory;
+use Omniplay\Model\GameRef;
 use Symfony\Component\HttpClient\HttpClient;
 
 $gog = (new GogFactory(HttpClient::create(['timeout' => 30])))->create();
@@ -110,11 +110,11 @@ In Symfony:
 
 ```yaml
 services:
-    Omnigame\Gog\GogFactory:
+    Omniplay\Gog\GogFactory:
         arguments: ['@http_client']
-    Omnigame\Registry:
+    Omniplay\Registry:
         arguments:
-            $factories: ['@Omnigame\Gog\GogFactory']
+            $factories: ['@Omniplay\Gog\GogFactory']
             $config:
                 gog: { factory: gog, options: { locale: fr-FR, country: FR, currency: EUR } }
 ```

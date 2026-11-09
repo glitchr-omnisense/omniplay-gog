@@ -1,16 +1,16 @@
 <?php
 
-namespace Omnigame\Gog\Tests;
+namespace Omniplay\Gog\Tests;
 
-use Omnigame\Exception\NotSupportedException;
-use Omnigame\Gog\GogFactory;
-use Omnigame\Gog\GogProvider;
-use Omnigame\Model\Game;
-use Omnigame\Model\GameRef;
-use Omnigame\Model\ImageKind;
-use Omnigame\Model\Platform;
-use Omnigame\Model\Query;
-use Omnigame\Testing\RecordedHttpClient;
+use Omniplay\Exception\NotSupportedException;
+use Omniplay\Gog\GogFactory;
+use Omniplay\Gog\GogProvider;
+use Omniplay\Model\Game;
+use Omniplay\Model\GameRef;
+use Omniplay\Model\ImageKind;
+use Omniplay\Model\Platform;
+use Omniplay\Model\Query;
+use Omniplay\Testing\RecordedHttpClient;
 use PHPUnit\Framework\TestCase;
 
 /** GOG's answers recorded on 2026-10-24 (trimmed to the fields read). */

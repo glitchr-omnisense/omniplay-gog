@@ -1,7 +1,7 @@
 {
-    "name": "omnigame/gog",
+    "name": "omniplay/gog",
     "type": "library",
-    "description": "Omnigame's GOG, under any PHP host, with no key: a product's record with its description and its price in the country asked, and the catalogue's search with prices, studios, genres and the store's rating.",
+    "description": "Omniplay's GOG, under any PHP host, with no key: a product's record with its description and its price in the country asked, and the catalogue's search with prices, studios, genres and the store's rating.",
     "keywords": [
         "gog",
         "store",
@@ -9,9 +9,9 @@
         "games",
         "catalogue",
         "framework-agnostic",
-        "omnigame"
+        "omniplay"
     ],
-    "homepage": "https://github.com/glitchr-omnisense/omnigame-gog",
+    "homepage": "https://github.com/glitchr-omnisense/omniplay-gog",
     "license": "MIT",
     "authors": [
         {
@@ -21,7 +21,7 @@
     ],
     "require": {
         "php": ">=8.2",
-        "omnisense/omnigame": "^1.0@dev",
+        "omnisense/omniplay": "^1.0@dev",
         "symfony/http-client": "^6.4|^7.0|^8.0"
     },
     "require-dev": {
@@ -30,7 +30,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Omnigame\\Gog\\": ""
+            "Omniplay\\Gog\\": ""
         },
         "exclude-from-classmap": [
             "/Tests/"
@@ -38,7 +38,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Omnigame\\Gog\\Tests\\": "Tests/"
+            "Omniplay\\Gog\\Tests\\": "Tests/"
         }
     },
     "extra": {
