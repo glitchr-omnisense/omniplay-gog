@@ -35,6 +35,10 @@ it reaches. The MIT licence covers this code only and grants no right to the ser
 whoever runs it complies with the terms above and obtains what they require. The authors publish
 it free of charge, make no commercial use of it and accept no liability for its use.
 
+## Usage policy
+
+The package declares its usage policy as data, in [policy.json](policy.json) (omnisense/contracts' schema). GOG publishes no API terms. Its User Agreement (read on 2026-11-10) forbids bots, scripts and extraction tools that interact with GOG services (11.1(e)): ask GOG before running this provider. Limits and rights are declared unknown; the terms ask no credit.
+
 ## Licence
 
 MIT.

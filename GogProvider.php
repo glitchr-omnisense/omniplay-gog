@@ -19,6 +19,8 @@ use Omniplay\Model\Rating;
 use Omniplay\Model\Scheme;
 use Omniplay\ProviderInterface;
 use Omniplay\SearchInterface;
+use Omnisense\Contracts\Policy\DeclaresUsagePolicyInterface;
+use Omnisense\Contracts\Policy\UsagePolicy;
 
 /**
  * GOG's catalogue, with no key: a product's record (api.gog.com/products,
@@ -27,8 +29,13 @@ use Omniplay\SearchInterface;
  * and GOG Galaxy use; GOG publishes no API terms for them. No ownership: GOG
  * offers no way for a third party to read a player's library.
  */
-final class GogProvider implements ProviderInterface, SearchInterface, CatalogueInterface
+final class GogProvider implements ProviderInterface, SearchInterface, CatalogueInterface, DeclaresUsagePolicyInterface
 {
+    /** GOG's usage policy, as its terms read on the day it says (provenance.verifiedAt). */
+    public const POLICY = __DIR__.'/policy.json';
+
+    private static ?UsagePolicy $policy = null;
+
     public function __construct(
         private readonly JsonClient $json,
         private readonly string $locale = 'en-US',
@@ -49,6 +56,11 @@ final class GogProvider implements ProviderInterface, SearchInterface, Catalogue
         return 'GOG';
     }
 
+    public function usagePolicy(): UsagePolicy
+    {
+        return self::$policy ??= UsagePolicy::fromFile(self::POLICY);
+    }
+
     public function capabilities(): Capabilities
     {
         return new Capabilities(
@@ -59,6 +71,7 @@ final class GogProvider implements ProviderInterface, SearchInterface, Catalogue
             attribution: 'Data from GOG.com',
             terms: ['https://support.gog.com/hc/en-us/articles/212632089-GOG-User-Agreement'],
             keyless: true,
+            policy: $this->usagePolicy(),
         );
     }
 

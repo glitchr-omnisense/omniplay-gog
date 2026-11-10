@@ -1,0 +1,37 @@
+{
+    "$schema": "https://github.com/glitchr-omnisense/contracts/blob/1.x/resources/usage-policy.schema.json",
+    "provider": "gog",
+    "rateLimits": null,
+    "rights": {
+        "commercial": "unknown",
+        "openSourceRequired": null,
+        "caching": {
+            "permission": "unknown",
+            "maxTtl": null
+        },
+        "storage": "unknown",
+        "redistribution": "unknown",
+        "attribution": {
+            "required": false,
+            "text": null,
+            "url": null,
+            "where": []
+        },
+        "licence": null
+    },
+    "requirements": {
+        "key": false,
+        "userAgent": {
+            "required": false,
+            "pattern": null
+        }
+    },
+    "provenance": {
+        "terms": "https://support.gog.com/hc/en-us/articles/212632089-GOG-User-Agreement",
+        "policy": null,
+        "verifiedAt": "2026-11-10",
+        "declaredBy": "maintainer",
+        "contact": "support@gog.com",
+        "notes": "GOG publishes no API nor developer terms for api.gog.com and catalog.gog.com (docs.gog.com covers the GALAXY SDK for publishers only; gogapidocs.readthedocs.io is a community's). Its User Agreement (effective 9 March 2026) asks, 11.1(e), not to create or use \"automation software, robots, bots, spiders, scripts, extraction tools or other software that interact with or affect GOG services or GOG content in any way\", unauthorized third-party programs collecting information about GOG services included: whoever runs this provider should ask GOG first. Limits, rights and credit are not stated. api.gog.com answers cache-control: max-age=86400 (observed, not a policy)."
+    }
+}

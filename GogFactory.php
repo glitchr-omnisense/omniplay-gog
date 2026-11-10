@@ -38,7 +38,7 @@ final class GogFactory extends ProviderFactory
     protected function build(Config $c): ProviderInterface
     {
         return new GogProvider(
-            new JsonClient($this->http ?? HttpClient::create(['timeout' => 20]), 'GOG', ['Accept' => 'application/json', 'User-Agent' => (string) $c->string('user_agent')]),
+            new JsonClient($this->http ?? HttpClient::create(['timeout' => 20]), 'GOG', ['Accept' => 'application/json', 'User-Agent' => (string) $c->string('user_agent')], $c->backoff()),
             (string) $c->string('locale'),
             (string) $c->string('country'),
             (string) $c->string('currency'),

@@ -139,3 +139,7 @@ An independent, unofficial client, affiliated with GOG in no way. GOG publishes 
 endpoints; its [user agreement](https://support.gog.com/hc/en-us/articles/212632089-GOG-User-Agreement)
 governs the store. Keep to a gentle pace, keep what you read, and link to the game's page on GOG:
 see the README.
+
+## Usage policy
+
+The package declares its usage policy as data, in [policy.json](../policy.json) (omnisense/contracts' schema). GOG publishes no API terms. Its User Agreement (read on 2026-11-10) forbids bots, scripts and extraction tools that interact with GOG services (11.1(e)): ask GOG before running this provider. Limits and rights are declared unknown; the terms ask no credit. `GogProvider::usagePolicy()` reads it, and its Capabilities carry it (`policy()`).
