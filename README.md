@@ -15,6 +15,18 @@ $witcher = $gog->game(GameRef::gog(1207658924));
 Options: `locale` ("en-US"), `country` ("US"), `currency` ("USD": the search's prices; a
 record's price is the country's own), `user_agent`, `api`, `catalog`.
 
+## Install
+
+```sh
+composer require omniplay/gog
+```
+
+It requires `omnisense/omniplay` `^1.0`, installed with it. A real call needs: no key. GOG publishes
+no API terms and its User Agreement restricts automated access: read `policy.json`, and ask GOG
+first. With no account, its tests run on recorded answers (a `MockHttpClient`), and
+[omnisense/omniplay](https://github.com/glitchr-omnisense/omniplay#install-and-a-first-call)'s
+README has a first call that runs without one.
+
 ## GOG's terms
 
 GOG publishes no terms for these endpoints; its
